@@ -11,7 +11,7 @@ void main() {
 	/*s.print();
 	cout << endl;*/
 	//s.insert(1, "hello");
-	s.erase(1, 5);
+	s.erase(1, 2);
 	s.print();
 
 

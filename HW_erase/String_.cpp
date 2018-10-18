@@ -91,11 +91,10 @@ void string_::insert(int position, const char * str)
 
 void string_::erase(int position, int number)
 {
-	char *tmp;
-	int k = position;
+	char *tmp;	
 	if (number > this->length || position < 0 || this->str == nullptr || this->length < position + number) return;
-	tmp = new char[this->length - number];
 	int newLenght = this->length - number;
+	tmp = new char[newLenght+1];	
 	for (int i = 0; i < newLenght+1; i++)
 	{
 		if (i < position) 
