@@ -92,7 +92,7 @@ void string_::insert(int position, const char * str)
 void string_::erase(int position, int number)
 {
 	char *tmp;	
-	if (number > this->length || position < 0 || this->str == nullptr || this->length < position + number) return;
+	if (position < 0 || this->str == nullptr || this->length < position + number) return;
 	int newLenght = this->length - number;
 	tmp = new char[newLenght+1];	
 	for (int i = 0; i < newLenght+1; i++)
@@ -105,7 +105,7 @@ void string_::erase(int position, int number)
 	this->~string_();
 	this->str = tmp;
 	this->length = newLenght;
-	this->str[length] = '\0';
+	//this->str[length] = '\0';
 }
 int string_::getLength()
 {
